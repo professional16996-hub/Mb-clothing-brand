@@ -1,0 +1,6 @@
+{
+  "name": "MB Clothing - Premium Fashion",
+  "description": "Premium Pakistani clothing e-commerce store with modern menswear, womenswear, traditional wear, and comprehensive admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
