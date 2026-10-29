@@ -146,48 +146,116 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
         </section>
       )}
 
-      {/* Trust & Prestige Attributes Bar */}
-      <section className="border-y border-[#1E1E26] bg-[#0E0E13] py-5">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-4 text-center sm:text-left">
-          <div className="flex items-center gap-3 justify-center sm:justify-start">
-            <div className="p-2 rounded-lg bg-amber-500/10 text-amber-400 shrink-0">
-              <Award size={20} />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-white uppercase tracking-wider">Master Craftsmanship</p>
-              <p className="text-[11px] text-gray-400">Pure raw silk, Egyptian Giza &amp; Banarasi brocade</p>
+      {/* Fashion Campaign Banners Grid (Replacing circled text attribute boxes) */}
+      <section className="py-6 px-4 sm:px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {/* Banner 1: Traditional Ceremonial */}
+          <div
+            onClick={() => navigate('/products?category=Traditional%20Wear')}
+            className="group relative min-h-[240px] sm:min-h-[280px] rounded-2xl overflow-hidden border border-[#2A2A38] hover:border-amber-500/60 transition-all duration-300 shadow-xl cursor-pointer flex flex-col justify-end p-6"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=1000&q=80"
+              alt="Royal Traditional Pakistani Attire"
+              className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-108"
+            />
+            {/* Vignette Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/20 group-hover:via-black/45 transition-colors" />
+
+            <div className="relative z-10 space-y-2">
+              <span className="inline-block bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full backdrop-blur-md">
+                Royal Ceremonial Edit
+              </span>
+              <h3 className="font-serif-luxury text-xl sm:text-2xl font-bold text-white leading-tight group-hover:text-amber-300 transition-colors">
+                Prince Coats &amp; Kurta Shalwar
+              </h3>
+              <p className="text-gray-300 text-xs line-clamp-2">
+                Handcrafted pure raw silk, Banarasi brocade &amp; gold zari embroidery for weddings.
+              </p>
+              <div className="pt-2 flex items-center gap-1.5 text-xs text-amber-400 font-bold">
+                <span>Explore Traditional</span>
+                <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+              </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-3 justify-center sm:justify-start">
-            <div className="p-2 rounded-lg bg-amber-500/10 text-amber-400 shrink-0">
-              <Truck size={20} />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-white uppercase tracking-wider">Free Nationwide Shipping</p>
-              <p className="text-[11px] text-gray-400">On all orders over {formatPKR(settings.freeShippingThreshold)} in Pakistan</p>
+          {/* Banner 2: Sartorial Menswear & Suits */}
+          <div
+            onClick={() => navigate("/products?category=Men's%20Clothing")}
+            className="group relative min-h-[240px] sm:min-h-[280px] rounded-2xl overflow-hidden border border-[#2A2A38] hover:border-amber-500/60 transition-all duration-300 shadow-xl cursor-pointer flex flex-col justify-end p-6"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80"
+              alt="Modern Luxury Menswear"
+              className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-108"
+            />
+            {/* Vignette Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/20 group-hover:via-black/45 transition-colors" />
+
+            <div className="relative z-10 space-y-2">
+              <span className="inline-block bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full backdrop-blur-md">
+                Sartorial Excellence
+              </span>
+              <h3 className="font-serif-luxury text-xl sm:text-2xl font-bold text-white leading-tight group-hover:text-amber-300 transition-colors">
+                Italian Cut Suits &amp; Blazers
+              </h3>
+              <p className="text-gray-300 text-xs line-clamp-2">
+                Super 120s wool blend blazers, Egyptian Giza shirts &amp; tailored Gurkha trousers.
+              </p>
+              <div className="pt-2 flex items-center gap-1.5 text-xs text-amber-400 font-bold">
+                <span>Shop Menswear</span>
+                <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+              </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-3 justify-center sm:justify-start">
-            <div className="p-2 rounded-lg bg-amber-500/10 text-amber-400 shrink-0">
-              <ShieldCheck size={20} />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-white uppercase tracking-wider">Cash on Delivery (COD)</p>
-              <p className="text-[11px] text-gray-400">Pay at your doorstep with 100% peace of mind</p>
-            </div>
-          </div>
+          {/* Banner 3: Festive Women's Pret & Shawls */}
+          <div
+            onClick={() => navigate("/products?category=Women's%20Clothing")}
+            className="group relative min-h-[240px] sm:min-h-[280px] rounded-2xl overflow-hidden border border-[#2A2A38] hover:border-amber-500/60 transition-all duration-300 shadow-xl cursor-pointer flex flex-col justify-end p-6 md:col-span-2 lg:col-span-1"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80"
+              alt="Festive Women Pret"
+              className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-108"
+            />
+            {/* Vignette Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/20 group-hover:via-black/45 transition-colors" />
 
-          <div className="flex items-center gap-3 justify-center sm:justify-start">
-            <div className="p-2 rounded-lg bg-amber-500/10 text-amber-400 shrink-0">
-              <Clock size={20} />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-white uppercase tracking-wider">7-Day Fitting Exchange</p>
-              <p className="text-[11px] text-gray-400">Complimentary concierge size adjustments</p>
+            <div className="relative z-10 space-y-2">
+              <span className="inline-block bg-red-600/80 text-white text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded-full backdrop-blur-md">
+                Festive Edition 2026
+              </span>
+              <h3 className="font-serif-luxury text-xl sm:text-2xl font-bold text-white leading-tight group-hover:text-amber-300 transition-colors">
+                Velvet Pret &amp; Kashmiri Shawls
+              </h3>
+              <p className="text-gray-300 text-xs line-clamp-2">
+                Opulent micro-velvet suits adorned with delicate resham and antique tilla handwork.
+              </p>
+              <div className="pt-2 flex items-center gap-1.5 text-xs text-amber-400 font-bold">
+                <span>Discover Women's Pret</span>
+                <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Minimalist Trust Pill Bar below banners */}
+        <div className="mt-4 py-2.5 px-4 rounded-xl bg-[#0E0E14] border border-[#20202A] flex flex-wrap items-center justify-around gap-2 text-[11px] text-gray-300">
+          <span className="flex items-center gap-1.5">
+            <Truck size={13} className="text-amber-400" />
+            <span>Free Express Nationwide Delivery &gt; {formatPKR(settings.freeShippingThreshold)}</span>
+          </span>
+          <span className="text-gray-600 hidden sm:inline">&bull;</span>
+          <span className="flex items-center gap-1.5">
+            <ShieldCheck size={13} className="text-emerald-400" />
+            <span>Cash on Delivery (COD) Available</span>
+          </span>
+          <span className="text-gray-600 hidden sm:inline">&bull;</span>
+          <span className="flex items-center gap-1.5">
+            <Clock size={13} className="text-amber-400" />
+            <span>7-Day Hassle-Free Fitting Exchange</span>
+          </span>
         </div>
       </section>
 
