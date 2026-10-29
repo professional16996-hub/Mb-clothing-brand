@@ -10,7 +10,8 @@ import {
   Clock, 
   Star, 
   Quote,
-  ShoppingBag
+  ShoppingBag,
+  MessageCircle
 } from 'lucide-react';
 import { ProductCard } from '../components/ProductCard';
 import { Product, Banner, Category } from '../types';
@@ -146,116 +147,111 @@ export const HomePage: React.FC<HomePageProps> = ({ navigate }) => {
         </section>
       )}
 
-      {/* Fashion Campaign Banners Grid (Replacing circled text attribute boxes) */}
+      {/* Luxury Model Couple Showcase Banner (Two poetic praise lines on the left & Royal Couple Picture) */}
       <section className="py-6 px-4 sm:px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {/* Banner 1: Traditional Ceremonial */}
-          <div
-            onClick={() => navigate('/products?category=Traditional%20Wear')}
-            className="group relative min-h-[240px] sm:min-h-[280px] rounded-2xl overflow-hidden border border-[#2A2A38] hover:border-amber-500/60 transition-all duration-300 shadow-xl cursor-pointer flex flex-col justify-end p-6"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=1000&q=80"
-              alt="Royal Traditional Pakistani Attire"
-              className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-108"
-            />
-            {/* Vignette Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/20 group-hover:via-black/45 transition-colors" />
+        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-amber-500/30 bg-gradient-to-br from-[#121218] via-[#0E0E14] to-[#08080B] shadow-2xl">
+          {/* Subtle Ambient Golden Glows */}
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="relative z-10 space-y-2">
-              <span className="inline-block bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full backdrop-blur-md">
-                Royal Ceremonial Edit
-              </span>
-              <h3 className="font-serif-luxury text-xl sm:text-2xl font-bold text-white leading-tight group-hover:text-amber-300 transition-colors">
-                Prince Coats &amp; Kurta Shalwar
-              </h3>
-              <p className="text-gray-300 text-xs line-clamp-2">
-                Handcrafted pure raw silk, Banarasi brocade &amp; gold zari embroidery for weddings.
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
+            {/* Left Column: Poetic Praise (Tareef) & Collection Details */}
+            <div className="lg:col-span-5 p-5 sm:p-8 lg:p-10 z-10 flex flex-col justify-center space-y-4 sm:space-y-5">
+              {/* Luxury Badge */}
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/20 to-amber-600/10 border border-amber-500/40 text-[11px] font-bold text-amber-300 tracking-widest uppercase font-cinzel">
+                  <Sparkles size={12} className="text-amber-400 animate-pulse" />
+                  Shahi Jora • The Royal Atelier Edit
+                </span>
+              </div>
+
+              {/* Two Poetic Praise Lines (Tareef) */}
+              <div className="space-y-3 relative pl-3.5 sm:pl-4 border-l-2 border-amber-500/70">
+                <Quote size={18} className="text-amber-400/40 absolute -top-2 -left-2.5" />
+                
+                {/* 1st Praise Line */}
+                <div className="space-y-1">
+                  <p className="font-serif-luxury text-lg sm:text-xl md:text-2xl font-bold text-amber-100 leading-snug">
+                    “ہر انداز میں شاہی وقار، ہر لباس میں بے مثال نزاکت۔”
+                  </p>
+                  <p className="text-xs sm:text-sm text-amber-400 font-medium tracking-wide italic">
+                    “Har andaaz mein shahi waqar, har libaas mein be-misaal nazaakat.”
+                  </p>
+                </div>
+
+                {/* 2nd Praise Line */}
+                <div className="space-y-1 pt-1">
+                  <p className="font-serif-luxury text-base sm:text-lg md:text-xl font-bold text-gray-200 leading-snug">
+                    “زری اور ریشم کا حسیں سنگم، جو ہر نظر کو قید کر لے۔”
+                  </p>
+                  <p className="text-xs sm:text-sm text-gray-300 font-medium tracking-wide italic">
+                    “Zari aur resham ka woh haseen sangam, jo har nazar ko qaid kar le.”
+                  </p>
+                </div>
+              </div>
+
+              {/* Complimentary Couture Statement */}
+              <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                Pakistan’s premier bespoke festive couture — where timeless imperial embroidery meets contemporary royal silhouette. Handcrafted for the couple destined to command every celebration.
               </p>
-              <div className="pt-2 flex items-center gap-1.5 text-xs text-amber-400 font-bold">
-                <span>Explore Traditional</span>
-                <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 pt-1">
+                <button
+                  onClick={() => navigate('/products?category=Traditional%20Wear')}
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-300 text-black font-bold text-xs sm:text-sm px-5 py-3 rounded-full transition-all duration-300 shadow-lg shadow-amber-500/20 cursor-pointer"
+                >
+                  <ShoppingBag size={15} />
+                  <span>Explore Couple &amp; Festive Edit</span>
+                  <ArrowRight size={14} />
+                </button>
+
+                <a
+                  href={`https://wa.me/${(settings.whatsappNumber || '+923001234567').replace(/[^0-9]/g, '')}?text=Assalam-o-Alaikum!%20I%20am%20interested%20in%20the%20MB%20Royal%20Couple%20Festive%20Collection.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-[#1A1A24] hover:bg-[#252533] text-emerald-400 border border-emerald-500/30 text-xs sm:text-sm px-4 py-3 rounded-full transition-colors font-medium text-center"
+                >
+                  <MessageCircle size={15} />
+                  <span>WhatsApp Concierge</span>
+                </a>
+              </div>
+
+              {/* Reassurance Trust Row */}
+              <div className="grid grid-cols-3 gap-2 pt-3 border-t border-[#222230] text-[10px] sm:text-[11px] text-gray-400">
+                <div className="flex items-center gap-1.5">
+                  <Truck size={12} className="text-amber-400 shrink-0" />
+                  <span className="truncate">Free Express Delivery</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <ShieldCheck size={12} className="text-emerald-400 shrink-0" />
+                  <span className="truncate">Cash on Delivery</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <Clock size={12} className="text-amber-400 shrink-0" />
+                  <span className="truncate">7-Day Exchange</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: High-Resolution Royal Model Couple Photo */}
+            <div className="lg:col-span-7 relative h-[360px] sm:h-[440px] md:h-[500px] lg:h-[560px] w-full overflow-hidden bg-black flex items-center justify-center">
+              <img
+                src="/images/mb_luxury_couple.jpg"
+                alt="MB Luxury Pakistani Couple in Royal Ceremonial Attire"
+                className="w-full h-full object-cover object-top sm:object-center transition-transform duration-700 hover:scale-103"
+              />
+              {/* Seamless gradients for mobile and desktop screens */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E14] via-transparent to-transparent lg:hidden" />
+              <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-[#121218] via-transparent to-transparent w-32" />
+              
+              {/* Floating Live Atelier Tag */}
+              <div className="absolute bottom-4 right-4 bg-black/80 backdrop-blur-md border border-amber-500/40 text-amber-300 text-[10px] sm:text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                <span>Handmade in Lahore &bull; Pure Zari Silk</span>
               </div>
             </div>
           </div>
-
-          {/* Banner 2: Sartorial Menswear & Suits */}
-          <div
-            onClick={() => navigate("/products?category=Men's%20Clothing")}
-            className="group relative min-h-[240px] sm:min-h-[280px] rounded-2xl overflow-hidden border border-[#2A2A38] hover:border-amber-500/60 transition-all duration-300 shadow-xl cursor-pointer flex flex-col justify-end p-6"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80"
-              alt="Modern Luxury Menswear"
-              className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-108"
-            />
-            {/* Vignette Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/20 group-hover:via-black/45 transition-colors" />
-
-            <div className="relative z-10 space-y-2">
-              <span className="inline-block bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full backdrop-blur-md">
-                Sartorial Excellence
-              </span>
-              <h3 className="font-serif-luxury text-xl sm:text-2xl font-bold text-white leading-tight group-hover:text-amber-300 transition-colors">
-                Italian Cut Suits &amp; Blazers
-              </h3>
-              <p className="text-gray-300 text-xs line-clamp-2">
-                Super 120s wool blend blazers, Egyptian Giza shirts &amp; tailored Gurkha trousers.
-              </p>
-              <div className="pt-2 flex items-center gap-1.5 text-xs text-amber-400 font-bold">
-                <span>Shop Menswear</span>
-                <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-              </div>
-            </div>
-          </div>
-
-          {/* Banner 3: Festive Women's Pret & Shawls */}
-          <div
-            onClick={() => navigate("/products?category=Women's%20Clothing")}
-            className="group relative min-h-[240px] sm:min-h-[280px] rounded-2xl overflow-hidden border border-[#2A2A38] hover:border-amber-500/60 transition-all duration-300 shadow-xl cursor-pointer flex flex-col justify-end p-6 md:col-span-2 lg:col-span-1"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80"
-              alt="Festive Women Pret"
-              className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-108"
-            />
-            {/* Vignette Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/20 group-hover:via-black/45 transition-colors" />
-
-            <div className="relative z-10 space-y-2">
-              <span className="inline-block bg-red-600/80 text-white text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded-full backdrop-blur-md">
-                Festive Edition 2026
-              </span>
-              <h3 className="font-serif-luxury text-xl sm:text-2xl font-bold text-white leading-tight group-hover:text-amber-300 transition-colors">
-                Velvet Pret &amp; Kashmiri Shawls
-              </h3>
-              <p className="text-gray-300 text-xs line-clamp-2">
-                Opulent micro-velvet suits adorned with delicate resham and antique tilla handwork.
-              </p>
-              <div className="pt-2 flex items-center gap-1.5 text-xs text-amber-400 font-bold">
-                <span>Discover Women's Pret</span>
-                <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Minimalist Trust Pill Bar below banners */}
-        <div className="mt-4 py-2.5 px-4 rounded-xl bg-[#0E0E14] border border-[#20202A] flex flex-wrap items-center justify-around gap-2 text-[11px] text-gray-300">
-          <span className="flex items-center gap-1.5">
-            <Truck size={13} className="text-amber-400" />
-            <span>Free Express Nationwide Delivery &gt; {formatPKR(settings.freeShippingThreshold)}</span>
-          </span>
-          <span className="text-gray-600 hidden sm:inline">&bull;</span>
-          <span className="flex items-center gap-1.5">
-            <ShieldCheck size={13} className="text-emerald-400" />
-            <span>Cash on Delivery (COD) Available</span>
-          </span>
-          <span className="text-gray-600 hidden sm:inline">&bull;</span>
-          <span className="flex items-center gap-1.5">
-            <Clock size={13} className="text-amber-400" />
-            <span>7-Day Hassle-Free Fitting Exchange</span>
-          </span>
         </div>
       </section>
 
