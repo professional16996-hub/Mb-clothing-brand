@@ -1,0 +1,876 @@
+{
+  "settings": {
+    "storeName": "MB Clothing",
+    "tagline": "Haute Couture & Premium Ready-to-Wear",
+    "logoText": "MB CLOTHING",
+    "whatsappNumber": "+923008472910",
+    "supportEmail": "concierge@mbclothing.pk",
+    "supportPhone": "+92 (42) 3578-9000",
+    "physicalAddress": "Flagship Atelier: 14-L, Mini Market, Gulberg II, Lahore, Pakistan | Karachi Studio: Bukhari Commercial, Phase 6, DHA, Karachi",
+    "freeShippingThreshold": 5000,
+    "standardShippingFee": 250,
+    "expressShippingFee": 450,
+    "currency": "₨",
+    "shippingPolicy": "MB Clothing delivers nationwide across Pakistan using premium express couriers (TCS & Leopards). Orders within Lahore & Karachi are delivered in 2-3 business days. Other cities take 3-5 business days. Cash on Delivery (COD) is available up to ₨ 50,000. Free shipping applies automatically to domestic orders over ₨ 5,000.",
+    "returnPolicy": "We offer a 7-day hassle-free exchange policy for unworn, unwashed garments with original tags intact. Made-to-measure and custom-tailored traditional attire are non-refundable but include one complimentary fitting adjustment at our atelier. For online returns, contact concierge@mbclothing.pk or WhatsApp us."
+  },
+  "users": [
+    {
+      "id": "usr-admin-01",
+      "name": "MB Executive Admin",
+      "email": "admin@mbclothing.pk",
+      "phone": "+92 300 8472910",
+      "passwordHash": "b10cc82b4743d3655452f9337fe299768373c4b67b6b9c899b6fbabb651be41fb85a91daef2dc3d65e86b53c34594bd8a7fe181eb122847945aa01437ef58d16",
+      "passwordSalt": "df2c1582eabb5025879c97923e5f7397",
+      "role": "admin",
+      "createdAt": "2026-01-15T08:00:00.000Z"
+    },
+    {
+      "id": "usr-cust-01",
+      "name": "Shahmeer Khan",
+      "email": "shahmeer.khan@gmail.com",
+      "phone": "+92 321 4455667",
+      "passwordHash": "dc8381d77dc567104cafd30c4eecc91ba6d67b02e8e32dd9c904406a69bd0f849c32a1bba4a1552e2ed2e41a21ff6ee4f33326403f15998dfbc4c94dfac583f4",
+      "passwordSalt": "679453d32c23fd5c94f69341c2846daa",
+      "role": "customer",
+      "province": "Punjab",
+      "city": "Lahore",
+      "address": "House 42, Street 8, Sector Y, DHA Phase 3",
+      "createdAt": "2026-02-10T11:20:00.000Z"
+    },
+    {
+      "id": "usr-cust-02",
+      "name": "Ayesha Siddiqui",
+      "email": "ayesha.siddiqui@outlook.com",
+      "phone": "+92 333 9876543",
+      "passwordHash": "dc8381d77dc567104cafd30c4eecc91ba6d67b02e8e32dd9c904406a69bd0f849c32a1bba4a1552e2ed2e41a21ff6ee4f33326403f15998dfbc4c94dfac583f4",
+      "passwordSalt": "679453d32c23fd5c94f69341c2846daa",
+      "role": "customer",
+      "province": "Sindh",
+      "city": "Karachi",
+      "address": "Apartment 5B, Creek Vistas, Phase 8, DHA",
+      "createdAt": "2026-02-18T14:45:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-traditional",
+      "name": "Traditional Wear",
+      "slug": "traditional-wear",
+      "description": "Bespoke Kurta sets, Jamawar waistcoats, Prince coats, and handcrafted sherwanis.",
+      "image": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "cat-mens-clothing",
+      "name": "Men's Clothing",
+      "slug": "mens-clothing",
+      "description": "Italian tailored suits, fine blazer jackets, luxury outerwear, and formal essentials.",
+      "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "cat-womens-clothing",
+      "name": "Women's Clothing",
+      "slug": "womens-clothing",
+      "description": "Exquisite embroidered pret, festive silk ensembles, and contemporary luxury silhouettes.",
+      "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "cat-shirts",
+      "name": "Shirts",
+      "slug": "shirts",
+      "description": "Egyptian Giza cotton formal shirts, pure linen button-downs, and smart casuals.",
+      "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "cat-tshirts",
+      "name": "T-Shirts",
+      "slug": "t-shirts",
+      "description": "Heavyweight Supima cotton tees, luxury mercerized polos, and minimalist essentials.",
+      "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "cat-jeans",
+      "name": "Jeans",
+      "slug": "jeans",
+      "description": "Japanese selvedge denim, comfortable stretch slim cuts, and premium vintage washes.",
+      "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "cat-trousers",
+      "name": "Trousers",
+      "slug": "trousers",
+      "description": "Tailored Gurkha trousers, pleated wool-blend chinos, and elegant formal slacks.",
+      "image": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "cat-hoodies",
+      "name": "Hoodies",
+      "slug": "hoodies",
+      "description": "480 GSM French Terry hoodies, brushed fleece pullovers, and luxury streetwear.",
+      "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-001",
+      "name": "Royal Zari Embroidered Prince Coat",
+      "slug": "royal-zari-embroidered-prince-coat",
+      "description": "An iconic formal masterpiece crafted from midnight black raw silk, embellished with antique matte gold Zari hand-embroidery across the mandarin collar, pocket welt, and cuffs. Finished with handcrafted gold crest buttons and satin lining.",
+      "fabricDetails": "100% Pure Raw Silk with Gold Bullion Thread Work",
+      "careInstructions": "Dry clean only by luxury garment specialists. Store in garment bag with cedar hanger.",
+      "category": "Traditional Wear",
+      "subcategory": "Prince Coats",
+      "regularPrice": 28990,
+      "salePrice": 23990,
+      "costPrice": 12000,
+      "stock": 14,
+      "sku": "MB-TR-001",
+      "sizes": [
+        "38R (S)",
+        "40R (M)",
+        "42R (L)",
+        "44R (XL)"
+      ],
+      "colors": [
+        {
+          "name": "Midnight Onyx & Gold",
+          "hex": "#111111"
+        },
+        {
+          "name": "Imperial Navy & Silver",
+          "hex": "#0e1e38"
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "isFeatured": true,
+      "isBestSeller": true,
+      "isNewArrival": true,
+      "isPublished": true,
+      "createdAt": "2026-02-01T10:00:00.000Z",
+      "rating": 4.9,
+      "reviewCount": 38
+    },
+    {
+      "id": "prod-002",
+      "name": "Embroidered Charcoal Kurta Shalwar Suit",
+      "slug": "embroidered-charcoal-kurta-shalwar-suit",
+      "description": "Signature Pakistani traditional wear tailored from high-thread-count Egyptian blended cotton. Features delicate tone-on-tone thread embroidery on the placket and cuffs, with matching tapered shalwar.",
+      "fabricDetails": "Superior Combed Egyptian Blended Cotton (Breathable, Crease-Resistant)",
+      "careInstructions": "Gentle hand wash or delicate machine wash. Warm iron on reverse side.",
+      "category": "Traditional Wear",
+      "subcategory": "Kurta Shalwar",
+      "regularPrice": 8990,
+      "salePrice": 6990,
+      "costPrice": 3200,
+      "stock": 28,
+      "sku": "MB-TR-002",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Charcoal Smoke",
+          "hex": "#2B2B2B"
+        },
+        {
+          "name": "Pearl Ivory",
+          "hex": "#FDFBF7"
+        },
+        {
+          "name": "Royal Pine Green",
+          "hex": "#1A3326"
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "isFeatured": true,
+      "isBestSeller": true,
+      "isNewArrival": false,
+      "isPublished": true,
+      "createdAt": "2026-01-20T10:00:00.000Z",
+      "rating": 4.8,
+      "reviewCount": 54
+    },
+    {
+      "id": "prod-003",
+      "name": "Bespoke Jamawar Gold Heritage Waistcoat",
+      "slug": "bespoke-jamawar-gold-heritage-waistcoat",
+      "description": "Woven with traditional Mughal-inspired floral motifs in metallic champagne gold and rich black silk. Features a classic band collar, welt pockets, and bespoke brass antique buttons.",
+      "fabricDetails": "Authentic Banarasi Jamawar Brocade with Silk Lining",
+      "careInstructions": "Dry clean only. Do not bleach or tumble dry.",
+      "category": "Traditional Wear",
+      "subcategory": "Waistcoats",
+      "regularPrice": 10990,
+      "salePrice": 8490,
+      "costPrice": 4000,
+      "stock": 19,
+      "sku": "MB-TR-003",
+      "sizes": [
+        "38 (S)",
+        "40 (M)",
+        "42 (L)",
+        "44 (XL)"
+      ],
+      "colors": [
+        {
+          "name": "Champagne Gold",
+          "hex": "#D4AF37"
+        },
+        {
+          "name": "Imperial Emerald",
+          "hex": "#0B3B2C"
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "isFeatured": false,
+      "isBestSeller": true,
+      "isNewArrival": false,
+      "isPublished": true,
+      "createdAt": "2026-01-10T10:00:00.000Z",
+      "rating": 4.9,
+      "reviewCount": 29
+    },
+    {
+      "id": "prod-004",
+      "name": "Italian Cut Midnight Navy Blazer",
+      "slug": "italian-cut-midnight-navy-blazer",
+      "description": "Single-breasted two-button blazer with pick-stitched peak lapels and double rear vents. Constructed with light half-canvas structure for exceptional drape and natural shoulder contour.",
+      "fabricDetails": "Super 120s Australian Fine Wool Blend with Silk Bemberg Lining",
+      "careInstructions": "Professional dry clean only. Steam press.",
+      "category": "Men's Clothing",
+      "subcategory": "Blazers & Suits",
+      "regularPrice": 21990,
+      "salePrice": 17990,
+      "costPrice": 8500,
+      "stock": 12,
+      "sku": "MB-MC-001",
+      "sizes": [
+        "38R",
+        "40R",
+        "42R",
+        "44R"
+      ],
+      "colors": [
+        {
+          "name": "Midnight Navy",
+          "hex": "#0D1B2A"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#000000"
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "isFeatured": true,
+      "isBestSeller": false,
+      "isNewArrival": true,
+      "isPublished": true,
+      "createdAt": "2026-02-05T10:00:00.000Z",
+      "rating": 4.7,
+      "reviewCount": 19
+    },
+    {
+      "id": "prod-005",
+      "name": "Giza Egyptian Cotton Crisp Formal Shirt",
+      "slug": "giza-egyptian-cotton-crisp-formal-shirt",
+      "description": "Expertly tailored with a structured semi-spread collar, mother-of-pearl buttons, and convertible French cuffs. Treated with non-iron liquid ammonia finish for all-day crispness.",
+      "fabricDetails": "100% 2-Ply Long-Staple Egyptian Giza 88 Cotton (140s Thread Count)",
+      "careInstructions": "Machine wash warm, hang dry. Medium heat iron while slightly damp.",
+      "category": "Shirts",
+      "subcategory": "Formal Shirts",
+      "regularPrice": 5990,
+      "salePrice": 4790,
+      "costPrice": 2100,
+      "stock": 35,
+      "sku": "MB-SH-001",
+      "sizes": [
+        "15 (S)",
+        "15.5 (M)",
+        "16 (L)",
+        "16.5 (XL)",
+        "17 (XXL)"
+      ],
+      "colors": [
+        {
+          "name": "Pure Chalk White",
+          "hex": "#FFFFFF"
+        },
+        {
+          "name": "Sky Celeste Blue",
+          "hex": "#D0E1F9"
+        },
+        {
+          "name": "French Lavender",
+          "hex": "#E6E6FA"
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "isFeatured": false,
+      "isBestSeller": true,
+      "isNewArrival": false,
+      "isPublished": true,
+      "createdAt": "2026-01-25T10:00:00.000Z",
+      "rating": 4.8,
+      "reviewCount": 42
+    },
+    {
+      "id": "prod-006",
+      "name": "Pure French Linen Resort Shirt",
+      "slug": "pure-french-linen-resort-shirt",
+      "description": "Breezy Cuban camp collar shirt garment-dyed for ultra-soft hand feel. Relaxed silhouette perfect for warm Pakistani summer evenings and destination travel.",
+      "fabricDetails": "100% Normandy French Flax Linen (Pre-Washed & Softened)",
+      "careInstructions": "Gentle cycle machine wash in cold water. Natural air dry.",
+      "category": "Shirts",
+      "subcategory": "Casual Shirts",
+      "regularPrice": 4990,
+      "stock": 22,
+      "sku": "MB-SH-002",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Natural Sand",
+          "hex": "#D2B48C"
+        },
+        {
+          "name": "Sage Olive",
+          "hex": "#556B2F"
+        },
+        {
+          "name": "Crisp White",
+          "hex": "#FFFFFF"
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "isFeatured": false,
+      "isBestSeller": false,
+      "isNewArrival": true,
+      "isPublished": true,
+      "createdAt": "2026-02-12T10:00:00.000Z",
+      "rating": 4.6,
+      "reviewCount": 15
+    },
+    {
+      "id": "prod-007",
+      "name": "Heavyweight Supima Cotton Luxury T-Shirt",
+      "slug": "heavyweight-supima-cotton-luxury-t-shirt",
+      "description": "Crafted from dense 260 GSM combed American Supima cotton. Cut with clean dropped shoulders, ribbed crewneck that retains shape wash after wash, and blind stitched hems.",
+      "fabricDetails": "100% Combed Compact Supima Cotton with Silken Enzyme Finish",
+      "careInstructions": "Machine wash cold with like colors. Tumble dry low.",
+      "category": "T-Shirts",
+      "subcategory": "Luxury Tees",
+      "regularPrice": 3290,
+      "salePrice": 2490,
+      "costPrice": 950,
+      "stock": 50,
+      "sku": "MB-TS-001",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Matte Jet Black",
+          "hex": "#111111"
+        },
+        {
+          "name": "Oatmeal Heather",
+          "hex": "#E3DAC9"
+        },
+        {
+          "name": "Espresso Brown",
+          "hex": "#3B2F2F"
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "isFeatured": true,
+      "isBestSeller": true,
+      "isNewArrival": false,
+      "isPublished": true,
+      "createdAt": "2026-01-18T10:00:00.000Z",
+      "rating": 4.9,
+      "reviewCount": 67
+    },
+    {
+      "id": "prod-008",
+      "name": "Japanese Selvedge Raw Denim Jeans",
+      "slug": "japanese-selvedge-raw-denim-jeans",
+      "description": "Woven on vintage shuttle looms in Okayama using 14.5 oz unwashed indigo denim with red-line selvedge ID. Custom MB antique brass hardware and veg-tan leather back patch.",
+      "fabricDetails": "100% Kurabo Mills Japanese Raw Selvedge Cotton Denim (14.5 oz)",
+      "careInstructions": "Wear frequently. Wash cold inside out after 6 months for custom fading.",
+      "category": "Jeans",
+      "subcategory": "Selvedge Denim",
+      "regularPrice": 7990,
+      "salePrice": 6490,
+      "costPrice": 2800,
+      "stock": 18,
+      "sku": "MB-JN-001",
+      "sizes": [
+        "30/32",
+        "32/32",
+        "34/32",
+        "36/32",
+        "38/32"
+      ],
+      "colors": [
+        {
+          "name": "Deep Indigo Selvedge",
+          "hex": "#1B263B"
+        },
+        {
+          "name": "Washed Charcoal Black",
+          "hex": "#2B2B2B"
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "isFeatured": true,
+      "isBestSeller": false,
+      "isNewArrival": true,
+      "isPublished": true,
+      "createdAt": "2026-02-08T10:00:00.000Z",
+      "rating": 4.8,
+      "reviewCount": 31
+    },
+    {
+      "id": "prod-009",
+      "name": "Pleated Italian Wool-Blend Gurkha Trousers",
+      "slug": "pleated-italian-wool-blend-gurkha-trousers",
+      "description": "Sophisticated sartorial trousers featuring an authentic double-buckle Gurkha waistband, deep inward front pleats, slant pockets, and a clean 2-inch turned-up cuff.",
+      "fabricDetails": "65% Fine Virgin Wool, 33% Polyester, 2% Elastane",
+      "careInstructions": "Dry clean only. Steam touch-up.",
+      "category": "Trousers",
+      "subcategory": "Sartorial Slacks",
+      "regularPrice": 6490,
+      "salePrice": 4990,
+      "costPrice": 2200,
+      "stock": 24,
+      "sku": "MB-TR-004",
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
+      "colors": [
+        {
+          "name": "Castlerock Charcoal",
+          "hex": "#4A4E54"
+        },
+        {
+          "name": "Camel Tan",
+          "hex": "#C19A6B"
+        },
+        {
+          "name": "Deep Olive",
+          "hex": "#3D4B39"
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "isFeatured": false,
+      "isBestSeller": true,
+      "isNewArrival": false,
+      "isPublished": true,
+      "createdAt": "2026-01-28T10:00:00.000Z",
+      "rating": 4.7,
+      "reviewCount": 22
+    },
+    {
+      "id": "prod-010",
+      "name": "Oversized 480 GSM French Terry Gold Crest Hoodie",
+      "slug": "oversized-480-gsm-french-terry-gold-crest-hoodie",
+      "description": "Ultra-heavyweight luxury streetwear hoodie. Features double-layered hood without drawstrings, kangaroo pocket with hidden card sleeve, and subtle tonal MB gold embroidered crest.",
+      "fabricDetails": "100% Combed Organic Cotton Heavy French Terry (480 GSM)",
+      "careInstructions": "Machine wash cold inside out. Air dry flat.",
+      "category": "Hoodies",
+      "subcategory": "Luxury Streetwear",
+      "regularPrice": 6990,
+      "salePrice": 5490,
+      "costPrice": 2400,
+      "stock": 30,
+      "sku": "MB-HD-001",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Pitch Black",
+          "hex": "#0B0B0B"
+        },
+        {
+          "name": "Washed Stone",
+          "hex": "#8C8C88"
+        },
+        {
+          "name": "Vintage Olive",
+          "hex": "#3B4136"
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "isFeatured": true,
+      "isBestSeller": true,
+      "isNewArrival": true,
+      "isPublished": true,
+      "createdAt": "2026-02-14T10:00:00.000Z",
+      "rating": 4.9,
+      "reviewCount": 48
+    },
+    {
+      "id": "prod-011",
+      "name": "Festive Velvet Embroidered Shawl 3-Piece Suit",
+      "slug": "festive-velvet-embroidered-shawl-3-piece-suit",
+      "description": "A masterpiece from our Haute Festive Women collection. Micro-velvet kurta adorned with Resham tilla and sequin handcrafting, paired with raw silk straight pants and a heavy Mughal border Kashmiri shawl.",
+      "fabricDetails": "Pure Micro Velvet with Silk Organza Accents & Zari Work",
+      "careInstructions": "Dry clean only. Wrap in muslin cloth when storing.",
+      "category": "Women's Clothing",
+      "subcategory": "Festive Pret",
+      "regularPrice": 32990,
+      "salePrice": 26990,
+      "costPrice": 14000,
+      "stock": 9,
+      "sku": "MB-WM-001",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Royal Crimson Maroon",
+          "hex": "#4A0E17"
+        },
+        {
+          "name": "Regal Emerald Green",
+          "hex": "#0A3B29"
+        },
+        {
+          "name": "Midnight Onyx",
+          "hex": "#111111"
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "isFeatured": true,
+      "isBestSeller": true,
+      "isNewArrival": true,
+      "isPublished": true,
+      "createdAt": "2026-02-15T10:00:00.000Z",
+      "rating": 5,
+      "reviewCount": 26
+    },
+    {
+      "id": "prod-012",
+      "name": "Pure Raw Silk Embroidered Co-ord Set",
+      "slug": "pure-raw-silk-embroidered-co-ord-set",
+      "description": "Contemporary high-fashion women’s co-ord ensemble. Features a structured band collar tunic with delicate pearl and beadwork along the neckline, paired with tailored culotte trousers.",
+      "fabricDetails": "100% Pure Raw Silk with Hand Embroidered Details",
+      "careInstructions": "Specialist dry clean only. Steam iron.",
+      "category": "Women's Clothing",
+      "subcategory": "Luxury Pret",
+      "regularPrice": 18990,
+      "salePrice": 15490,
+      "costPrice": 7500,
+      "stock": 15,
+      "sku": "MB-WM-002",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "colors": [
+        {
+          "name": "Powder Blush Rose",
+          "hex": "#D8A47F"
+        },
+        {
+          "name": "Champagne Ivory",
+          "hex": "#F7F4EB"
+        }
+      ],
+      "images": [
+        "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "isFeatured": false,
+      "isBestSeller": false,
+      "isNewArrival": true,
+      "isPublished": true,
+      "createdAt": "2026-02-18T10:00:00.000Z",
+      "rating": 4.8,
+      "reviewCount": 14
+    }
+  ],
+  "coupons": [
+    {
+      "id": "cpn-001",
+      "code": "WELCOME10",
+      "discountType": "percentage",
+      "discountValue": 10,
+      "minSpend": 3000,
+      "maxDiscount": 2500,
+      "expiryDate": "2026-12-31",
+      "usageLimit": 500,
+      "usageCount": 68,
+      "isActive": true
+    },
+    {
+      "id": "cpn-002",
+      "code": "LUXURY500",
+      "discountType": "fixed",
+      "discountValue": 500,
+      "minSpend": 4000,
+      "expiryDate": "2026-12-31",
+      "usageLimit": 300,
+      "usageCount": 42,
+      "isActive": true
+    },
+    {
+      "id": "cpn-003",
+      "code": "FESTIVE20",
+      "discountType": "percentage",
+      "discountValue": 20,
+      "minSpend": 15000,
+      "maxDiscount": 6000,
+      "expiryDate": "2026-11-30",
+      "usageLimit": 100,
+      "usageCount": 18,
+      "isActive": true
+    }
+  ],
+  "banners": [
+    {
+      "id": "bnr-001",
+      "title": "TIMELESS TRADITION, MODERN YOU",
+      "subtitle": "Premium quality shalwar kameez for men and women. Classic designs, perfect fit, and everyday elegance.",
+      "tag": "MOHSIN BHATTI ATELIER 2026",
+      "ctaText": "SHOP TRADITIONAL",
+      "ctaLink": "/products?category=Traditional%20Wear",
+      "imageUrl": "/assets/aistudio/image_f8e24ddc.png",
+      "active": true
+    },
+    {
+      "id": "bnr-002",
+      "title": "MODERN SARTORIAL EXCELLENCE",
+      "subtitle": "Italian cut blazers, Egyptian Giza shirts, and tailored wool trousers.",
+      "tag": "LUXURY MENSWEAR",
+      "ctaText": "SHOP MENSWEAR",
+      "ctaLink": "/products?category=Men's%20Clothing",
+      "imageUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=85",
+      "active": true
+    },
+    {
+      "id": "bnr-003",
+      "title": "ROYAL VELVET & SILK PRET",
+      "subtitle": "Exquisite women’s festive ensembles with opulent hand embroidery and Kashmiri shawls.",
+      "tag": "FESTIVE EDIT",
+      "ctaText": "DISCOVER FESTIVE",
+      "ctaLink": "/products?category=Women's%20Clothing",
+      "imageUrl": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1600&q=85",
+      "active": true
+    }
+  ],
+  "orders": [
+    {
+      "id": "MB-PK-98241",
+      "customerId": "usr-cust-01",
+      "customerName": "Shahmeer Khan",
+      "customerEmail": "shahmeer.khan@gmail.com",
+      "customerPhone": "+92 321 4455667",
+      "shippingAddress": {
+        "fullName": "Shahmeer Khan",
+        "phone": "+92 321 4455667",
+        "email": "shahmeer.khan@gmail.com",
+        "province": "Punjab",
+        "city": "Lahore",
+        "address": "House 42, Street 8, Sector Y, DHA Phase 3",
+        "landmark": "Near Y-Block Commercial Market",
+        "postalCode": "54792"
+      },
+      "items": [
+        {
+          "productId": "prod-001",
+          "name": "Royal Zari Embroidered Prince Coat",
+          "image": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=400&q=80",
+          "selectedSize": "40R (M)",
+          "selectedColor": "Midnight Onyx & Gold",
+          "quantity": 1,
+          "unitPrice": 23990,
+          "totalPrice": 23990
+        }
+      ],
+      "subtotal": 23990,
+      "discount": 2399,
+      "couponCode": "WELCOME10",
+      "shippingFee": 0,
+      "total": 21591,
+      "paymentMethod": "cod",
+      "paymentStatus": "pending",
+      "orderStatus": "shipped",
+      "courierName": "TCS Express",
+      "trackingNumber": "TCS-924810294PK",
+      "notes": "Please call before delivery. Handover to security if unavailable.",
+      "createdAt": "2026-02-24T14:30:00.000Z",
+      "updatedAt": "2026-02-25T11:00:00.000Z",
+      "timeline": [
+        {
+          "status": "pending",
+          "title": "Order Placed",
+          "message": "Order submitted via Cash on Delivery (COD).",
+          "timestamp": "2026-02-24T14:30:00.000Z"
+        },
+        {
+          "status": "confirmed",
+          "title": "Order Verified",
+          "message": "Order verified by MB Concierge desk.",
+          "timestamp": "2026-02-24T15:15:00.000Z"
+        },
+        {
+          "status": "processing",
+          "title": "Quality Inspection & Packaging",
+          "message": "Garment steamed, checked, and placed in luxury signature box.",
+          "timestamp": "2026-02-25T09:00:00.000Z"
+        },
+        {
+          "status": "shipped",
+          "title": "Dispatched via TCS",
+          "message": "Package handed over to TCS Express. Tracking ID: TCS-924810294PK",
+          "timestamp": "2026-02-25T11:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "MB-PK-98188",
+      "customerId": "usr-cust-02",
+      "customerName": "Ayesha Siddiqui",
+      "customerEmail": "ayesha.siddiqui@outlook.com",
+      "customerPhone": "+92 333 9876543",
+      "shippingAddress": {
+        "fullName": "Ayesha Siddiqui",
+        "phone": "+92 333 9876543",
+        "email": "ayesha.siddiqui@outlook.com",
+        "province": "Sindh",
+        "city": "Karachi",
+        "address": "Apartment 5B, Creek Vistas, Phase 8, DHA",
+        "landmark": "Opposite Creek Club",
+        "postalCode": "75500"
+      },
+      "items": [
+        {
+          "productId": "prod-011",
+          "name": "Festive Velvet Embroidered Shawl 3-Piece Suit",
+          "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=400&q=80",
+          "selectedSize": "M",
+          "selectedColor": "Royal Crimson Maroon",
+          "quantity": 1,
+          "unitPrice": 26990,
+          "totalPrice": 26990
+        }
+      ],
+      "subtotal": 26990,
+      "discount": 0,
+      "shippingFee": 0,
+      "total": 26990,
+      "paymentMethod": "cod",
+      "paymentStatus": "cod_received",
+      "orderStatus": "delivered",
+      "courierName": "Leopards Courier",
+      "trackingNumber": "LEO-74892100PK",
+      "notes": "Leave with resident reception.",
+      "createdAt": "2026-02-20T10:00:00.000Z",
+      "updatedAt": "2026-02-23T16:30:00.000Z",
+      "timeline": [
+        {
+          "status": "pending",
+          "title": "Order Placed",
+          "message": "Order submitted.",
+          "timestamp": "2026-02-20T10:00:00.000Z"
+        },
+        {
+          "status": "confirmed",
+          "title": "Order Verified",
+          "message": "Customer phone confirmed.",
+          "timestamp": "2026-02-20T11:00:00.000Z"
+        },
+        {
+          "status": "processing",
+          "title": "Atelier Preparation",
+          "message": "Final finishing & perfume sachet enclosed.",
+          "timestamp": "2026-02-21T09:30:00.000Z"
+        },
+        {
+          "status": "shipped",
+          "title": "In Transit",
+          "message": "Handed to Leopards Courier Karachi Hub.",
+          "timestamp": "2026-02-22T08:00:00.000Z"
+        },
+        {
+          "status": "delivered",
+          "title": "Delivered Successfully",
+          "message": "Delivered & COD ₨ 26,990 collected.",
+          "timestamp": "2026-02-23T16:30:00.000Z"
+        }
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-001",
+      "name": "Bilal Farooq",
+      "email": "bilal.farooq@yahoo.com",
+      "phone": "+92 301 5556677",
+      "subject": "Custom Tailoring for Wedding Sherwani",
+      "message": "Looking to order 4 bespoke waistcoats and 1 bridal prince coat for my brother’s Valima in Islamabad next month. Can we schedule an in-person measurement at your Gulberg atelier?",
+      "createdAt": "2026-02-26T09:15:00.000Z",
+      "read": false
+    }
+  ]
+}

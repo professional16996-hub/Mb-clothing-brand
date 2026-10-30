@@ -586,12 +586,12 @@ function getSeedData() {
     banners: [
       {
         id: 'bnr-001',
-        title: 'THE HAUTE HERITAGE COLLECTION',
-        subtitle: 'Handcrafted raw silk prince coats, jamawar waistcoats & bespoke ceremonial wear.',
-        tag: 'NEW 2026 CEREMONIAL EDITION',
-        ctaText: 'EXPLORE COLLECTION',
+        title: 'TIMELESS TRADITION, MODERN YOU',
+        subtitle: 'Premium quality shalwar kameez for men and women. Classic designs, perfect fit, and everyday elegance.',
+        tag: 'MOHSIN BHATTI ATELIER 2026',
+        ctaText: 'SHOP TRADITIONAL',
         ctaLink: '/products?category=Traditional%20Wear',
-        imageUrl: 'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=1600&q=85',
+        imageUrl: '/assets/aistudio/image_f8e24ddc.png',
         active: true
       },
       {
